@@ -1,17 +1,18 @@
-@lt-gray :#ddd;
+@lt-gray: #ddd;
 @background-dark: #512DA8;
-@background-pale: #D575CD;
-@background-light: #D1C4E9;
+@background-light: #9575CD;
+@background-pale: #D1C4E9;
 
-@carousel-height :300px;
+// Height variables
+@carousel-item-height: 300px;
 
-.zero-margin(@pad-up-dn :0px, @pad-left-right:0px){
-    margin :0px auto;
-    padding : @pad-up-dn,@pad-left-right;
+.zero-margin (@pad-up-dn: 0px, @pad-left-right: 0px) {
+    margin: 0px auto;
+    padding: @pad-up-dn @pad-left-right;
 }
 
 .row-header {
-    .zero-margin()
+    .zero-margin();
 }
 
 .row-content {
@@ -21,20 +22,20 @@
 }
 
 .footer {
-    .zero-margin(20px,0px);
-    background-color: @background-light;
+    background-color: @background-pale;
+    .zero-margin(20px, 0px);
 }
 
 .jumbotron {
     .zero-margin(70px,30px);
-    background-color: @background-pale;
+    background: @background-light;
     color: floralwhite;
 }
 
-.address {
+address {
     font-size: 80%;
-    color: #0f0f0f;
     margin: 0px;
+    color: #0f0f0f;
 }
 
 body {
@@ -50,14 +51,14 @@ body {
     border-left: 1px solid @lt-gray;
     border-right: 1px solid @lt-gray;
     border-bottom: 1px solid @lt-gray;
-    padding: 10px
+    padding: 10px;
 }
 
 .carousel {
     background: @background-dark;
 
     .carousel-item {
-        height: @carousel-height;
+        height: @carousel-item-height;
 
         img {
             position: absolute;
@@ -76,4 +77,5 @@ body {
     right: 0px;
     position: absolute;
     bottom: 0px;
+    z-index: 1;
 }
